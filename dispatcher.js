@@ -9,10 +9,12 @@ module.exports = {
     if (eventObj.httpVerb === POST_METHOD) {
       return request
         .post(url)
+        .type('application/json')
         .send(params)
     } else {
       return request
         .get(url)
+        .type('application/json')
         .query(params)
     }
   }
